@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --color-bg-1: #121212;
+    --color-bg-2: #242424;
+    --color-brand: #e7b837;
+    --color-body: #c0c0c0;
+    --color-heading: #ffffff;
+    --color-brand-light: #dbb959;
+    --color-border: rgba(255,255,255,0.1);
+    --font-main: "Plus Jakarta Sans";
+    --border-radius: 32px;
+}
+
+
+body{
+    background-color: var(--color-bg-1);
+    color: var(--color-body);
+    font-family: var(--font-main);
+    line-height: 1.7;
+}
+
+/* Navbar */
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+    color: var(--color-heading);
+}
+
+.navbar{
+    background: transparent;
+  backdrop-filter: blur(10px);
+}
+
+a{
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+
+a:hover{
+
+    color: var(--color-brand);
+}
+
+img{
+    width: 100%;
+}
+
+
+section{
+    padding-top: 120px;
+    padding-bottom: 70px;
+}
+
+.nav-bar {
+    background-color: var(--color-bg-1);
+}
+
+.btn {
+    padding: 12px 24px;
+}
+
+.btn-brand{
+    background-color: var(--color-brand);
+    color: var(--color-bg-1);
+    font-weight: 700;
+    border-radius: 100px;
+}
+
+.btn-brand:hover{
+    background-color: var(--color-brand-light);
+    border-color: var(--color-brand-light);
+    color: var(--color-bg-1);
+}
+
+@keyframes typing {
+    0%, 5% { content: ""; }
+    6%, 7% { content: "I"; }
+    8%, 9% { content: "Im"; }
+    10%, 11% { content: "Ima"; }
+    12%, 13% { content: "Imag"; }
+    14%, 15% { content: "Imagi"; }
+    16%, 17% { content: "Imagin"; }
+    18%, 19% { content: "Imagine"; }
+    20%, 21% { content: "Imagine "; }
+    22%, 23% { content: "Imagine i"; }
+    24%, 25% { content: "Imagine it"; }
+    26%, 27% { content: "Imagine it,"; }
+    28%, 29% { content: "Imagine it, "; }
+    30%, 31% { content: "Imagine it, L"; }
+    32%, 33% { content: "Imagine it, Le"; }
+    34%, 35% { content: "Imagine it, Lea"; }
+    36%, 37% { content: "Imagine it, Lear"; }
+    38%, 39% { content: "Imagine it, Learn"; }
+    40%, 41% { content: "Imagine it, Learn "; }
+    42%, 43% { content: "Imagine it, Learn i"; }
+    44%, 45% { content: "Imagine it, Learn it"; }
+    46%, 47% { content: "Imagine it, Learn it,"; }
+    48%, 49% { content: "Imagine it, Learn it, "; }
+    50%, 51% { content: "Imagine it, Learn it, C"; }
+    52%, 53% { content: "Imagine it, Learn it, Co"; }
+    54%, 55% { content: "Imagine it, Learn it, Cod"; }
+    56%, 57% { content: "Imagine it, Learn it, Code"; }
+    58%, 59% { content: "Imagine it, Learn it, Code "; }
+    60%, 61% { content: "Imagine it, Learn it, Code i"; }
+    62%, 63% { content: "Imagine it, Learn it, Code it"; }
+    64%, 100% { content: "Imagine it, Learn it, Code it."; }
+  }
+
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  .typewriter {
+    --caret: currentcolor;
+  }
+  
+  .typewriter::before {
+    content: "";
+    animation: typing 5.5s infinite;
+  }
+  
+  .typewriter::after {
+    content: "";
+    border-right: 1px solid var(--caret);
+    animation: blink 0.5s linear infinite;
+  }
+  
+  .typewriter.thick::after {
+    border-right: 1ch solid var(--caret);
+  }
+  
+  .typewriter.nocaret::after {
+    border-right: 0;
+  }
+  
+  
+  @media (prefers-reduced-motion) {
+    .typewriter::after {
+      animation: none;
+    }
+    
+   
+    .typewriter::before {
+      content: "developer";
+      animation: sequencePopup 12s linear infinite;
+    }
+  }
+  
+  /* Navbar */
+  
+
+  /* About */
+
+  #About h1 {
+    font-weight: 800;
+  }
+
+  .bg-image{
+    min-height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url(/assests/bgimage3.png)
+    
+  }
+
+  /* Section title */
+
+  .section-title{
+    margin-bottom: 40px;
+  }
+
+  .section-title h1 {
+    color: var(--color-heading);
+  }
+
+  /* Service */
+
+  .service {
+    border-radius: var(--border-radius);
+    background-color: var(--color-bg-2);
+  }
+
+ .icon-box {
+    width: 64px;
+    height: 64px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 100px;
+    font-size: 24px;
+    color: var(--color-brand);
+ } 
+
+
+ /* How it works */
+
+ #howitworks{
+    padding-top: 0;
+    
+ }
+
+ /* The actual timeline (the vertical ruler) */
+.main-timeline {
+    position: relative;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .main-timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: var(--color-brand);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .timeline {
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .timeline::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -13px;
+    background-color: var(--color-bg-2);
+    border: 5px solid var(--color-brand);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    padding: 0px 40px 20px 0px;
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    padding: 0px 0px 20px 40px;
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    right: 30px;
+    border: medium solid var(--color-bg-2);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--color-bg-2);
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    left: 30px;
+    border: medium solid var(--color-bg-2);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--color-bg-2) transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -12px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .main-timeline::after {
+      left: 31px;
+    }
+  
+    /* Full-width containers */
+    .timeline {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+    /* Make sure that all arrows are pointing leftwards */
+    .timeline::before {
+      left: 60px;
+      border: medium solid var(--color-bg-2);
+      border-width: 10px 10px 10px 0;
+      border-color: transparent var(--color-bg-2) transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left::after,
+    .right::after {
+      left: 18px;
+    }
+  
+    .left::before {
+      right: auto;
+    }
+  
+    /* Make all right containers behave like the left ones */
+    .right {
+      left: 0%;
+    }
+  }
+
+  .card {
+    color: var(--color-heading);
+    background-color: var(--color-bg-2);
+  }
+
+  /* Testimonials  */
+
+  .testimonial-card {
+    background-color: var(--color-bg-2);
+    border-radius: 20px;
+    
+    transition: transform 0.3s ease;
+}
+
+
+.quote-icon {
+    font-size: 4rem;
+    color: #6366f1;
+    opacity: 0.2;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--color-brand);
+    
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-brand);
+    border-radius: 50%;
+    top: 50%;
+   
+}
+
+.carousel-control-prev {
+    left: -20px;
+}
+
+.carousel-control-next {
+    right: -20px;
+}
+
+.carousel-indicators {
+    bottom: -50px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #6366f1;
+    opacity: 0.5;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+}
+
+
+footer{
+    background-color: var(--color-bg-2);
+}
+
+.footer-link {
+    color: #f8f9fa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--color-brand);
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    margin: 0 8px;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    color: #fff;
+}
+
+
+@keyframes slides {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 30px 0px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before, .logos:after {
+  position: absolute;
+  top: 0;
+  content: '';
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  
+}
+
+.logos:after {
+  right: 0;
+  
+}
+
+.logo_items {
+  display: inline-block;
+  animation: 10s slides infinite linear;
+}
+
+.logos:hover .logo_items {
+  animation-play-state: paused;
+}
+
+.logo_items img{
+  height: 100px;
+}
+
+
+$gr-1:linear-gradient(170deg, #01E4F8 0%, #1D3EDE 100%);
+$gr-2:linear-gradient(170deg, #B4EC51 0%, #429321 100%);
+$gr-3:linear-gradient(170deg, #C86DD7 0%, #3023AE 100%);
+
+.gr-1{background: $gr-1;}
+.gr-2{background: $gr-2;}
+.gr-3{background: $gr-3;}
+
+*{transition: .5s;}
+
+.h-100{height: 100vh !important;}
+.align-middle{
+  position: relative;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.column{
+  margin-top:3rem;
+  padding-left:3rem;
+  &:hover{
+    padding-left:0;
+    .card .txt{
+      margin-left:1rem;
+      h1, p{
+        color:rgba(255,255,255,1);
+        opacity:1;
+      }
+    }
+    a{
+      color:rgba(255,255,255,1);
+      &:after{
+      width: 10%;
+      }
+    }
+  }
+}
+.card{
+  min-height:170px;
+  margin: 0;
+  padding: 1.7rem 1.2rem;
+  border: none;
+  border-radius: 0;
+  color:var(--color-heading);
+  letter-spacing: .05rem;
+  font-family: 'Oswald', sans-serif;
+  box-shadow: 0 0 21px rgba(0,0,0,.27);
+  .txt{
+    margin-left:-3rem;
+    z-index: 1;
+    h1{
+      font-size:1.5rem;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+    p{
+      font-size:.7rem;
+      letter-spacing: 0rem;
+      margin-top:33px;
+      opacity:0;
+      color: var(--color-heading);
+    }
+  }
+  a{
+    z-index:3;
+    font-size: .7rem;
+    color: var(--color-heading);
+    margin-left:1rem;
+    position:relative;
+    bottom: -.5rem;
+    text-transform: uppercase;
+    &:after {
+      content:"";
+      display: inline-block;
+      height: 0.5em;
+      width: 0;
+      margin-right: -100%;
+      margin-left: 10px;
+      border-top: 1px solid rgba(255,255,255,1);
+      transition: .5s;
+    }
+  }
+  .ico-card{
+    position:absolute;
+    top: 0;
+    left:0;
+    bottom:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+}

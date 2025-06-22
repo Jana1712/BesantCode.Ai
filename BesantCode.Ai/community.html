@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - BesantCode.Ai</title>
+    <link rel="icon" type="image/png" href="Assests/besantcode.ai logo.png">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+    <style>
+        :root {
+            --primary-color: #121212;
+            --secondary-color: #242424;
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+            --accent-color: #4e73df;
+        }
+        
+        body {
+            font-family: "Plus Jakarta Sans";
+            background-color: #121212;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 5rem 0;
+            margin-bottom: 3rem;
+        }
+        
+        .community-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 1.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.1);
+        }
+        
+        .community-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 2rem 0 rgba(58, 59, 69, 0.2);
+        }
+        
+        .category-badge {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.35rem 0.65rem;
+            border-radius: 0.25rem;
+            background-color: var(--accent-color);
+            color: white;
+        }
+        
+        .discussion-card {
+            border-left: 0.25rem solid var(--accent-color);
+        }
+        
+        .event-card {
+            border-left: 0.25rem solid #1cc88a;
+        }
+        
+        .resource-card {
+            border-left: 0.25rem solid #f6c23e;
+        }
+        
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .filter-section {
+            background-color: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .tab-content {
+            padding: 1.5rem 0;
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: var(--accent-color);
+        }
+        
+        .nav-pills .nav-link {
+            color: var(--primary-color);
+        }
+        
+        .post-interactions {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 3rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    
+<nav class="navbar navbar-expand-lg navbar-light navbar-dark py-3 ">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <h3 style="font-weight: bold;">BesantCode.Ai</h3>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Courses
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="AI.html">Artificial Intelligence (AI)</a></li>
+              <li><a class="dropdown-item" href="fullstackdeveloper.html">Full Stack Developer</a></li>
+              <li><a class="dropdown-item" href="dataanalytics.html">Data Analytics</a></li>
+              <li><a class="dropdown-item" href="cloud.html">Cloud Computing</a></li>
+              <li><a class="dropdown-item" href="datascience.html">Data Science</a></li>
+              <li><a class="dropdown-item" href="softwaretesting.html">Software Testing</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Services">Features</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="codeeditor.html">Compiler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="besantquiz.html">Besant Quizzes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="community.html">Community</a>
+          </li>
+
+        </ul>
+        <a href="#Courses" class="btn btn-brand ms-lg-3">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Join Our BesantCode.Ai Community</h1>
+            <p class="lead mb-4">Connect with fellow learners, share knowledge, and grow together in your IT career journey</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#discussions" class="btn btn-light btn-lg px-4">
+                    <i class="fas fa-comments me-2"></i>Browse Discussions
+                </a>
+                <a href="#start-discussion" class="btn btn-outline-light btn-lg px-4">
+                    <i class="fas fa-plus me-2"></i>Start a Discussion
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Stats -->
+    <section class="container mb-5">
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="card community-card h-100 py-4">
+                    <div class="card-body">
+                        <h2 class="display-5 fw-bold text-primary">10,000+</h2>
+                        <p class="lead">Active Developers</p>
+                        <i class="fas fa-users fa-2x text-muted"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card community-card h-100 py-4">
+                    <div class="card-body">
+                        <h2 class="display-5 fw-bold text-success">5,000+</h2>
+                        <p class="lead">Discussions</p>
+                        <i class="fas fa-comment-dots fa-2x text-muted"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card community-card h-100 py-4">
+                    <div class="card-body">
+                        <h2 class="display-5 fw-bold text-warning">100+</h2>
+                        <p class="lead">Events Monthly</p>
+                        <i class="fas fa-calendar-alt fa-2x text-muted"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="container mb-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Filter Section -->
+                <div id="discussions" class="filter-section mb-4">
+                    <div class="row">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <label for="category-filter" class="form-label">Filter by Category</label>
+                            <select id="category-filter" class="form-select">
+                                <option selected>All Categories</option>
+                                <option>Artificial Intelligence</option>
+                                <option>Web Development</option>
+                                <option>Data Science</option>
+                                <option>Cloud Computing</option>
+                                <option>Career Advice</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="sort-by" class="form-label">Sort By</label>
+                            <select id="sort-by" class="form-select">
+                                <option selected>Most Recent</option>
+                                <option>Most Popular</option>
+                                <option>Most Comments</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Discussion Cards -->
+                <div class="card community-card discussion-card mb-4">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://media.licdn.com/dms/image/v2/D4D35AQFhlWu0OYIVkQ/profile-framedphoto-shrink_800_800/B4DZd.eqNLGUAo-/0/1750173656264?e=1751212800&v=beta&t=isd6TeSMKRfE5v09lh6u0xpMscT8-vOrZ68A02QFkw4" alt="User" class="user-avatar me-3">
+                            <div>
+                                <h5 class="mb-0">Saran C</h5>
+                                <small class="text-muted">Posted 2 hours ago in <a href="#" class="text-decoration-none">Artificial Intelligence</a></small>
+                            </div>
+                        </div>
+                        <h4 class="card-title">How to improve model accuracy with limited data?</h4>
+                        <p class="card-text">I'm working on a computer vision project but only have about 500 labeled images. What techniques would you recommend to improve my model's accuracy with this limited dataset?</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="post-interactions">
+                                <span class="me-3"><i class="far fa-comment me-1"></i> 14 comments</span>
+                                <span><i class="far fa-heart me-1"></i> 32 likes</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Join Discussion</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card community-card discussion-card mb-4">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://media.licdn.com/dms/image/v2/D5603AQGBRGMPWeNL0w/profile-displayphoto-shrink_400_400/B56ZZCow0PH0Ag-/0/1744874705272?e=1756339200&v=beta&t=a4YAzojkgmBG_f1YrAtKdcHALf--soX3NJp7etUKOAk" alt="User" class="user-avatar me-3">
+                            <div>
+                                <h5 class="mb-0">Rajaram V</h5>
+                                <small class="text-muted">Posted 5 hours ago in <a href="#" class="text-decoration-none">Web Development</a></small>
+                            </div>
+                        </div>
+                        <h4 class="card-title">React vs Angular for enterprise applications in 2025</h4>
+                        <p class="card-text">We're starting a new project at work and need to choose between React and Angular. Our team has experience with both. What are the current pros/cons of each framework for large-scale applications?</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="post-interactions">
+                                <span class="me-3"><i class="far fa-comment me-1"></i> 27 comments</span>
+                                <span><i class="far fa-heart me-1"></i> 45 likes</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Join Discussion</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card community-card discussion-card mb-4">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://media.licdn.com/dms/image/v2/D5603AQG5XKqLIIS2og/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1678702708252?e=1756339200&v=beta&t=zbqRVEMwU7GTWIplw9CxOxrJE7Cl-QLvOYEMZi2UdEU" alt="User" class="user-avatar me-3">
+                            <div>
+                                <h5 class="mb-0">Rajesh R</h5>
+                                <small class="text-muted">Posted 1 day ago in <a href="#" class="text-decoration-none">Career Advice</a></small>
+                            </div>
+                        </div>
+                        <h4 class="card-title">Transitioning from QA to Development - Tips?</h4>
+                        <p class="card-text">I've been working as a QA engineer for 3 years but want to move into development. Has anyone made this transition successfully? What skills should I focus on building?</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="post-interactions">
+                                <span class="me-3"><i class="far fa-comment me-1"></i> 19 comments</span>
+                                <span><i class="far fa-heart me-1"></i> 38 likes</span>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Join Discussion</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!-- Start Discussion -->
+                <div id="start-discussion" class="card community-card mt-5">
+                    <div class="card-body">
+                        <h4 class="card-title mb-4">Start a New Discussion</h4>
+                        <form>
+                            <div class="mb-3">
+                                <label for="discussion-title" class="form-label">Title</label>
+                                <input type="text" class="form-control" id="discussion-title" placeholder="What's your question or topic?">
+                            </div>
+                            <div class="mb-3">
+                                <label for="discussion-category" class="form-label">Category</label>
+                                <select class="form-select" id="discussion-category">
+                                    <option selected>Select a category</option>
+                                    <option>Artificial Intelligence</option>
+                                    <option>Web Development</option>
+                                    <option>Data Science</option>
+                                    <option>Cloud Computing</option>
+                                    <option>Career Advice</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="discussion-content" class="form-label">Content</label>
+                                <textarea class="form-control" id="discussion-content" rows="5" placeholder="Provide details about your question or topic..."></textarea>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="notify-me">
+                                    <label class="form-check-label" for="notify-me">
+                                        Notify me of replies
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Post Discussion</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Upcoming Events -->
+                <div class="card community-card event-card mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title mb-4">Upcoming Events</h4>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0 me-3 text-center">
+                                <div class="bg-primary text-white p-2 rounded" style="width: 60px;">
+                                    <div class="fw-bold">OCT</div>
+                                    <div class="fs-5">15</div>
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">AI Hackathon 2023</h5>
+                                <p class="mb-1 text-muted"><i class="far fa-clock me-1"></i> 10:00 AM - 6:00 PM IST</p>
+                                <p class="mb-0 text-muted"><i class="fas fa-video me-1"></i> Virtual Event</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="flex-shrink-0 me-3 text-center">
+                                <div class="bg-primary text-white p-2 rounded" style="width: 60px;">
+                                    <div class="fw-bold">OCT</div>
+                                    <div class="fs-5">22</div>
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Tech Career Panel</h5>
+                                <p class="mb-1 text-muted"><i class="far fa-clock me-1"></i> 3:00 PM - 5:00 PM IST</p>
+                                <p class="mb-0 text-muted"><i class="fas fa-map-marker-alt me-1"></i> Chennai Office</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 me-3 text-center">
+                                <div class="bg-primary text-white p-2 rounded" style="width: 60px;">
+                                    <div class="fw-bold">NOV</div>
+                                    <div class="fs-5">05</div>
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Cloud Workshop</h5>
+                                <p class="mb-1 text-muted"><i class="far fa-clock me-1"></i> 11:00 AM - 2:00 PM IST</p>
+                                <p class="mb-0 text-muted"><i class="fas fa-video me-1"></i> Virtual Event</p>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-outline-primary">View All Events</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Popular Resources -->
+                <div class="card community-card resource-card mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title mb-4">Popular Resources</h4>
+                        
+                        <div class="d-flex mb-3">
+                            <div class="flex-shrink-0 me-3">
+                                <i class="fas fa-file-pdf text-danger fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Machine Learning Cheat Sheet</h5>
+                                <p class="mb-0 text-muted">Downloaded 1,200+ times</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-3">
+                            <div class="flex-shrink-0 me-3">
+                                <i class="fas fa-link text-primary fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">React Performance Optimization Guide</h5>
+                                <p class="mb-0 text-muted">Shared 450+ times</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                                <i class="fas fa-video text-info fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">AWS Certification Webinar</h5>
+                                <p class="mb-0 text-muted">Watched 800+ times</p>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-outline-warning">Browse Resources</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Top Contributors -->
+                <div class="card community-card">
+                    <div class="card-body">
+                        <h4 class="card-title mb-4">Top Contributors</h4>
+                        
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://media.licdn.com/dms/image/v2/D4D35AQFhlWu0OYIVkQ/profile-framedphoto-shrink_400_400/B4DZd.eqNLGUAk-/0/1750173656264?e=1751212800&v=beta&t=1ZtDQcNmIuUE-WGKk9CxRDS0BQuBy39jH9KbAPfNrSU" alt="User" class="user-avatar me-3">
+                            <div>
+                                <h5 class="mb-0">Saran C</h5>
+                                <p class="mb-0 text-muted">Helped 120+ members</p>
+                            </div>
+                            <span class="badge bg-primary ms-auto">Gold</span>
+                        </div>
+                        
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://media.licdn.com/dms/image/v2/D5603AQGBRGMPWeNL0w/profile-displayphoto-shrink_400_400/B56ZZCow0PH0Ag-/0/1744874705272?e=1756339200&v=beta&t=a4YAzojkgmBG_f1YrAtKdcHALf--soX3NJp7etUKOAk" alt="User" class="user-avatar me-3">
+                            <div>
+                                <h5 class="mb-0">Rajaram V</h5>
+                                <p class="mb-0 text-muted">Helped 85+ members</p>
+                            </div>
+                            <span class="badge bg-secondary ms-auto">Silver</span>
+                        </div>
+                        
+                        <div class="d-flex align-items-center">
+                            <img src="https://media.licdn.com/dms/image/v2/D5603AQG5XKqLIIS2og/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1678702708252?e=1756339200&v=beta&t=zbqRVEMwU7GTWIplw9CxOxrJE7Cl-QLvOYEMZi2UdEU" alt="User" class="user-avatar me-3">
+                            <div>
+                                <h5 class="mb-0">Rajesh R</h5>
+                                <p class="mb-0 text-muted">Helped 60+ members</p>
+                            </div>
+                            <span class="badge bg-warning text-dark ms-auto">Bronze</span>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-outline-secondary">View Leaderboard</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-dark text-white py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">Ready to Join Our Community?</h2>
+            <p class="lead mb-4">Connect with thousands of IT professionals and students to learn, share, and grow together</p>
+            
+            <a href="#" class="btn btn-outline-light btn-lg px-5">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">BesantCode.Ai</h5>
+                    <p>Your gateway to the best AI and IT courses. We provide top-quality content and community to help you advance your skills.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Community</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Discussions</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Events</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Resources</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Leaderboard</a></li>
+                    </ul>
+                </div>
+               
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Courses</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="AI.html" class="text-white text-decoration-none">Artificial Intelligence (AI)</a></li>
+                        <li class="mb-2"><a href="fullstackdeveloper.html" class="text-white text-decoration-none">Full Stack Developer</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Data Analytics</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Cloud Computing</a></li>
+                        <li class="mb-2"><a href="softwaretesting.html" class="text-white text-decoration-none">Software Testing</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            No. 8, 11th Main Road, Vijaya Nagar, Velachery, Chennai-600042
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-phone me-2"></i>
+                            <a href="tel:+1234567890" class="text-white text-decoration-none">+1 (234) 567-890</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-envelope me-2"></i>
+                            <a href="mailto:contact@example.com" class="text-white text-decoration-none">BesantCode.Ai@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 BesantCode.Ai. All rights reserved - Janakiraman B</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simple filter functionality (would be more robust in a real implementation)
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryFilter = document.getElementById('category-filter');
+            const sortByFilter = document.getElementById('sort-by');
+            
+            // These would filter discussions in a real implementation
+            categoryFilter.addEventListener('change', function() {
+                console.log('Filtering by category:', this.value);
+                // Actual filtering logic would go here
+            });
+            
+            sortByFilter.addEventListener('change', function() {
+                console.log('Sorting by:', this.value);
+                // Actual sorting logic would go here
+            });
+        });
+    </script>
+</body>
+</html>

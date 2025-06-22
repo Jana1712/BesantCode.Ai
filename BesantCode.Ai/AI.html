@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BesantCode.Ai - Top BesantCode AI Courses</title>
+    <link rel="icon" type="image/png" href="Assests/besantcode.ai logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+    <style>
+        :root {
+            --primary-color: #121212;
+            --secondary-color: #242424;
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: "Plus Jakarta Sans";
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 5rem 0;
+            margin-bottom: 3rem;
+        }
+        
+        .course-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 1.5rem;
+            height: 100%;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .badge-level {
+            font-size: 0.8rem;
+            padding: 0.35em 0.65em;
+        }
+        
+        .rating {
+            color: #f8d64e;
+        }
+        
+        .price {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .instructor {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+        
+        .filter-section {
+            background-color: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        a{
+            text-decoration: none;
+            color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                BesantCode.Ai
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                            </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="AI.html">Artificial Intelligence (AI)</a></li>
+                        <li><a class="dropdown-item" href="fullstackdeveloper.html">Full Stack Developer</a></li>
+                        <li><a class="dropdown-item" href="dataanalytics.html">Data Analytics</a></li>
+                        <li><a class="dropdown-item" href="cloud.html">Cloud Computing</a></li>
+                        <li><a class="dropdown-item" href="datascience.html">Data Science</a></li>
+                        <li><a class="dropdown-item" href="softwaretesting.html">Software Testing</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#featured">Featured</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#machine-learning">Machine Learning</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#deep-learning">Deep Learning</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nlp">NLP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#computer-vision">Computer Vision</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search courses..." aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Master Artificial Intelligence with Top BesantCode Courses</h1>
+            <p class="lead mb-4">Discover the best AI, Machine Learning, and Deep Learning courses curated for all skill levels</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#featured" class="btn btn-light btn-lg px-4">Explore Courses</a>
+                <a href="#filter-section" class="btn btn-outline-light btn-lg px-4">Find Your Course</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section id="filter-section" class="container filter-section">
+        <div class="row">
+            <div class="col-md-3 mb-3 mb-md-0">
+                <label for="category-filter" class="form-label">Category</label>
+                <select id="category-filter" class="form-select">
+                    <option selected>All Categories</option>
+                    <option>Machine Learning</option>
+                    <option>Deep Learning</option>
+                    <option>Natural Language Processing</option>
+                    <option>Computer Vision</option>
+                    <option>Data Science</option>
+                </select>
+            </div>
+            <div class="col-md-3 mb-3 mb-md-0">
+                <label for="level-filter" class="form-label">Skill Level</label>
+                <select id="level-filter" class="form-select">
+                    <option selected>All Levels</option>
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Advanced</option>
+                </select>
+            </div>
+            <div class="col-md-3 mb-3 mb-md-0">
+                <label for="duration-filter" class="form-label">Duration</label>
+                <select id="duration-filter" class="form-select">
+                    <option selected>Any Duration</option>
+                    <option>0-5 hours</option>
+                    <option>5-10 hours</option>
+                    <option>10-20 hours</option>
+                    <option>20+ hours</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="sort-by" class="form-label">Sort By</label>
+                <select id="sort-by" class="form-select">
+                    <option selected>Most Popular</option>
+                    <option>Highest Rated</option>
+                    <option>Newest</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Courses -->
+    <section id="featured" class="container mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold">Featured AI Courses</h2>
+            <a href="#" class="btn btn-outline-primary">View All</a>
+        </div>
+        
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Course Card 1 -->
+            <div class="col">
+                <div class="card course-card h-100">
+                    <img src="https://img-c.udemycdn.com/course/240x135/950390_270f_3.jpg" class="card-img-top" alt="Machine Learning A-Z">
+                    <div class="card-body">
+                        <span class="badge bg-success badge-level mb-2">Beginner</span>
+                        <h5 class="card-title">Machine Learning A-Z™: AI, Python & R + ChatGPT Bonus</h5>
+                        <p class="instructor">Kirill Eremenko, Hadelin de Ponteves</p>
+                        <div class="rating mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="text-dark ms-1">4.5 (178,920)</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            
+                            <span class="text-muted"><i class="far fa-clock me-1"></i>44 hours</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <button class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#courseModal1">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Course Card 2 -->
+            <div class="col">
+                <div class="card course-card h-100">
+                    <img src="https://img-c.udemycdn.com/course/240x135/1362070_b9a1_2.jpg" class="card-img-top" alt="Deep Learning">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark badge-level mb-2">Intermediate</span>
+                        <h5 class="card-title">Deep Learning A-Z™: Hands-On Artificial Neural Networks</h5>
+                        <p class="instructor">Kirill Eremenko, Hadelin de Ponteves</p>
+                        <div class="rating mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-dark ms-1">4.6 (62,450)</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            
+                            <span class="text-muted"><i class="far fa-clock me-1"></i>23.5 hours</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <button class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#courseModal2">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Course Card 3 -->
+            <div class="col">
+                <div class="card course-card h-100">
+                    <img src="https://img-c.udemycdn.com/course/240x135/903744_8eb2.jpg" class="card-img-top" alt="AI for Everyone">
+                    <div class="card-body">
+                        <span class="badge bg-info text-dark badge-level mb-2">Beginner</span>
+                        <h5 class="card-title">AI for Everyone: Master the Basics</h5>
+                        <p class="instructor">Andrew Ng</p>
+                        <div class="rating mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="text-dark ms-1">4.8 (34,760)</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            
+                            <span class="text-muted"><i class="far fa-clock me-1"></i>6 hours</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <button class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#courseModal3">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Machine Learning Courses -->
+    <section id="machine-learning" class="container mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold">Machine Learning Courses</h2>
+            <a href="#" class="btn btn-outline-primary">View All</a>
+        </div>
+        
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Course Card 4 -->
+            <div class="col">
+                <div class="card course-card h-100">
+                    <img src="https://studybullet.com/wp-content/uploads/2022/03/Python-Practice-Tests-amp-Interview-Questions-BasicAdvanced.jpg" class="card-img-top" alt="Python for Data Science">
+                    <div class="card-body">
+                        <span class="badge bg-success badge-level mb-2">Beginner</span>
+                        <h5 class="card-title">Python for Data Science and Machine Learning Bootcamp</h5>
+                        <p class="instructor">Jose Portilla</p>
+                        <div class="rating mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="text-dark ms-1">4.6 (112,340)</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            
+                            <span class="text-muted"><i class="far fa-clock me-1"></i>25 hours</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <button class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#courseModal4">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Course Card 5 -->
+            <div class="col">
+                <div class="card course-card h-100">
+                    <img src="https://img-c.udemycdn.com/course/240x135/1754098_e0df_3.jpg" class="card-img-top" alt="Mathematics for ML">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark badge-level mb-2">Intermediate</span>
+                        <h5 class="card-title">Mathematics for Machine Learning</h5>
+                        <p class="instructor">Lazy Programmer Team</p>
+                        <div class="rating mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="text-dark ms-1">4.4 (8,920)</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            
+                            <span class="text-muted"><i class="far fa-clock me-1"></i>18.5 hours</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <button class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#courseModal5">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Course Card 6 -->
+            <div class="col">
+                <div class="card course-card h-100">
+                    <img src="https://studybullet.com/wp-content/uploads/2025/05/SPSS-A-Practical-Guide-to-Data-Analysis.jpg" class="card-img-top" alt="ML with Python">
+                    <div class="card-body">
+                        <span class="badge bg-danger badge-level mb-2">Advanced</span>
+                        <h5 class="card-title">Machine Learning with Python: From Linear Models to Deep Learning</h5>
+                        <p class="instructor">MIT Professional Education</p>
+                        <div class="rating mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-dark ms-1">4.7 (5,430)</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            
+                            <span class="text-muted"><i class="far fa-clock me-1"></i>32 hours</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <button class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#courseModal6">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep Learning Courses -->
+    <section id="deep-learning" class="container mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold">Deep Learning Courses</h2>
+            <a href="#" class="btn btn-outline-primary">View All</a>
+        </div>
+        
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Course Card 7 -->
+            <div class="col">
+                <div class="card course-card h-100">
+                    <img src="https://studybullet.com/wp-content/uploads/2025/05/Disruptive-Thinking.jpg" class="card-img-top" alt="Deep Learning with Python">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark badge-level mb-2">Intermediate</span>
+                        <h5 class="card-title">Deep Learning with Python and Keras</h5>
+                        <p class="instructor">Jose Portilla</p>
+                        <div class="rating mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="text-dark ms-1">4.5 (23,450)</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            
+                            <span class="text-muted"><i class="far fa-clock me-1"></i>14.5 hours</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <button class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#courseModal7">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Course Card 8 -->
+            <div class="col">
+                <div class="card course-card h-100">
+                    <img src="https://studybullet.com/wp-content/uploads/2025/05/5563064_742d_2.jpg" class="card-img-top" alt="TensorFlow Developer">
+                    <div class="card-body">
+                        <span class="badge bg-danger badge-level mb-2">Advanced</span>
+                        <h5 class="card-title">TensorFlow Developer Certificate: Zero to Mastery</h5>
+                        <p class="instructor">Andrei Neagoie</p>
+                        <div class="rating mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-dark ms-1">4.7 (15,320)</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            
+                            <span class="text-muted"><i class="far fa-clock me-1"></i>28 hours</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <button class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#courseModal8">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Course Card 9 -->
+            <div class="col">
+                <div class="card course-card h-100">
+                    <img src="https://studybullet.com/wp-content/uploads/2025/05/6335203_b3e4.jpg" class="card-img-top" alt="PyTorch for Deep Learning">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark badge-level mb-2">Intermediate</span>
+                        <h5 class="card-title">PyTorch for Deep Learning: Zero to Mastery</h5>
+                        <p class="instructor">Daniel Bourke</p>
+                        <div class="rating mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="text-dark ms-1">4.6 (9,870)</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            
+                            <span class="text-muted"><i class="far fa-clock me-1"></i>22 hours</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <button class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#courseModal9">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-dark text-white py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">Ready to Start Your AI Journey?</h2>
+            <p class="lead mb-4">Join thousands of students learning AI and machine learning on BesantCode</p>
+            <a href="#" class="btn btn-light btn-lg px-5">Browse All Courses</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">BesantCode.Ai</h5>
+                    <p>Your gateway to the best AI and machine learning courses on BesantCode.Ai. We curate top-quality content to help you advance your skills.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Machine Learning</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Deep Learning</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">NLP</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Computer Vision</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Data Science</a></li>
+                    </ul>
+                </div>
+               
+
+                <div class="col-lg-2 col-md-6">
+                <h5 class="mb-4">Courses</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="AI.html" class="footer-link">Artificial Intelligence (AI) </a></li>
+                    <li class="mb-2"><a href="fullstackdeveloper.html" class="footer-link">Full Stack Developer</a></li>
+                    <li class="mb-2"><a href="#" class="footer-link">Data Analytics</a></li>
+                    <li class="mb-2"><a href="#" class="footer-link">Cloud Computing</a></li>
+                    <li class="mb-2"><a href="softwaretesting.html" class="footer-link">Software Testing</a></li>
+                </ul>
+            </div>
+
+
+                
+                  <div class="col-lg-4 col-md-6">
+                <h5 class="mb-4">Contact Info</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-3">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        No. 8, 11th Main Road, Vijaya Nagar, Velachery,  Chennai-600042
+                    </li>
+                    <li class="mb-3">
+                        <i class="fas fa-phone me-2"></i>
+                        <a href="tel:+1234567890" class="footer-link">+1 (234) 567-890</a>
+                    </li>
+                    <li class="mb-3">
+                        <i class="fas fa-envelope me-2"></i>
+                        <a href="mailto:contact@example.com" class="footer-link">BesantCode.Ai@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; BesantCode.Ai. All rights reserved - Janakiraman B</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Course Modals -->
+    <!-- Modal 1 -->
+    <div class="modal fade" id="courseModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Machine Learning A-Z™: AI, Python & R + ChatGPT Bonus</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="https://img-c.udemycdn.com/course/480x270/950390_270f_3.jpg" class="img-fluid rounded mb-3" alt="Course Image">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-success">Beginner</span>
+                                <span class="text-muted"><i class="far fa-clock me-1"></i>44 hours</span>
+                            </div>
+                            <div class="rating mb-3">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-dark ms-1">4.5 (178,920 ratings)</span>
+                            </div>
+                            <p class="instructor mb-3">Instructors: Harish Ragul</p>
+                            <h4 class="price mb-4"></h4>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="fw-bold">Course Description</h6>
+                            <p class="mb-3">Learn to create Machine Learning Algorithms in Python and R from two Data Science experts. Code templates included. This comprehensive course covers both theory and implementation with real-world projects.</p>
+                            
+                            <h6 class="fw-bold mt-4">What You'll Learn</h6>
+                            <ul class="mb-3">
+                                <li>Master Machine Learning on Python & R</li>
+                                <li>Make accurate predictions</li>
+                                <li>Handle advanced techniques like Dimensionality Reduction</li>
+                                <li>Build recommendation systems</li>
+                                <li>Apply Machine Learning to real-world problems</li>
+                            </ul>
+                            
+                            <h6 class="fw-bold mt-4">Requirements</h6>
+                            <ul>
+                                <li>Basic high school mathematics</li>
+                                <li>No prior coding experience required</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="#" class="btn btn-primary">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simple filter functionality (would be more robust in a real implementation)
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryFilter = document.getElementById('category-filter');
+            const levelFilter = document.getElementById('level-filter');
+            
+            // These would filter courses in a real implementation
+            categoryFilter.addEventListener('change', function() {
+                console.log('Filtering by category:', this.value);
+                // Actual filtering logic would go here
+            });
+            
+            levelFilter.addEventListener('change', function() {
+                console.log('Filtering by level:', this.value);
+                // Actual filtering logic would go here
+            });
+        });
+    </script>
+</body>
+</html>
